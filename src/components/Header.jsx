@@ -27,7 +27,7 @@ const Header = () => {
       color="default"
       sx={{
         boxShadow: "none",
-        borderBottom: "1px solid #ddd",
+        borderBottom: "2px solid #ddd",
         paddingX: isMobile ? 0 : 3,
         backgroundColor: "#ffffff",
       }}>
@@ -149,7 +149,6 @@ const Header = () => {
           sx={{
             justifyContent: "center",
             backgroundColor: "#ffffff",
-            borderBottom: "1px solid #ddd",
           }}>
           <Button
             sx={{
