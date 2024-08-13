@@ -10,6 +10,8 @@ import {
   IconButton,
 } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import StarIcon from "@mui/icons-material/Star";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
 
 const FeaturedProduct = ({ product }) => {
   return (
@@ -49,10 +51,22 @@ const FeaturedProduct = ({ product }) => {
           <Typography
             variant="subtitle1"
             color="text.secondary"
-            sx={{ marginRight: 1 }}>
+            sx={{ marginRight: 1, textDecoration: "underline" }}>
             {product.shopName}
           </Typography>
-          <Rating value={product.rating} readOnly size="small" />
+          <Rating
+            value={product.rating}
+            readOnly
+            size="small"
+            icon={
+              <StarIcon style={{ color: "black", height: 18, width: 18 }} />
+            }
+            emptyIcon={
+              <StarBorderIcon
+                style={{ color: "black", height: 18, width: 18 }}
+              />
+            }
+          />
           <Typography
             variant="body2"
             color="text.secondary"
@@ -68,13 +82,20 @@ const FeaturedProduct = ({ product }) => {
         </Typography>
         <Typography
           variant="body2"
-          color="success.main"
-          sx={{ marginTop: 1, fontWeight: "bold" }}>
+          sx={{
+            marginTop: 1,
+            fontWeight: "bold",
+            display: "inline",
+            bgcolor: "success.light",
+            px: 1,
+            borderRadius: "15px",
+          }}>
           FREE shipping
         </Typography>
         <Button
           variant="outlined"
           sx={{
+            display: "block",
             marginTop: 2,
             textTransform: "none",
             color: "#333",
@@ -82,6 +103,12 @@ const FeaturedProduct = ({ product }) => {
             boxShadow: "none",
             border: "2px solid #000",
             paddingX: 3,
+            "&:hover": {
+              backgroundColor: "#000",
+              color: "#fff",
+              borderColor: "#000",
+              transition: "none",
+            },
           }}>
           Shop this item
         </Button>
