@@ -10,7 +10,12 @@ import {
 
 const ProductCard = ({ image, title, price, rating, shopName }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card
+      sx={{
+        maxWidth: 345,
+        boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+        margin: "auto",
+      }}>
       <CardMedia component="img" height="140" image={image} alt={title} />
       <CardContent>
         <Typography variant="h6" component="div">

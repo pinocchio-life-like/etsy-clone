@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "./components/Header";
 import FilterBar from "./components/FilterBar";
 import ProductGrid from "./components/ProductGrid";
@@ -6,7 +5,7 @@ import ProductGrid from "./components/ProductGrid";
 const products = [
   {
     id: 1,
-    image: "https://via.placeholder.com/150",
+    image: "https://via.placeholder.com/300",
     title: "Football Field Pencil Case",
     price: 19.0,
     rating: 5,
