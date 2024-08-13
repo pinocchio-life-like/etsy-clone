@@ -11,9 +11,9 @@ import {
   useTheme,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -136,10 +136,10 @@ const Header = () => {
             <FavoriteBorderIcon />
           </IconButton>
           <IconButton sx={{ color: "#333" }}>
-            <ShoppingCartIcon />
+            <CardGiftcardIcon />
           </IconButton>
           <IconButton sx={{ color: "#333" }}>
-            <PersonOutlineIcon />
+            <AddShoppingCartIcon />
           </IconButton>
         </Box>
       </Toolbar>
