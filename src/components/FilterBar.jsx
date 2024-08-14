@@ -16,16 +16,33 @@ const FilterBar = () => {
       <Box
         sx={{
           display: "flex",
-          alignItems: "center",
+          alignItems: {
+            xs: "flex-end",
+            sm: "center",
+          },
           justifyContent: "space-between",
-          padding: "2px 24px",
+          paddingY: "2px",
+          paddingX: {
+            xs: 0,
+            sm: 4,
+          },
           flexWrap: "nowrap",
+          flexDirection: { xs: "column", sm: "row" },
         }}>
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+          <IconButton
+            sx={{
+              display: { xs: "inline-flex", sm: "none" },
+              padding: "5px",
+              color: "black",
+            }}>
+            <FilterListIcon />
+          </IconButton>
           <Button
             variant="outlined"
             startIcon={<FilterListIcon />}
             sx={{
+              display: { xs: "none", sm: "inline-flex" },
               fontWeight: "bold",
               padding: "5px 16px",
               borderRadius: "24px",
@@ -33,22 +50,42 @@ const FilterBar = () => {
               color: "black",
               height: "36px",
               fontSize: "14px",
+              whiteSpace: "nowrap",
             }}>
             All Filters
           </Button>
         </Box>
 
-        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-          <Typography sx={{ color: "#555", fontSize: "14px" }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: 1,
+            width: { xs: "auto", sm: "auto" },
+            justifyContent: { xs: "space-between", sm: "flex-end" },
+          }}>
+          <Typography
+            sx={{
+              color: "#555",
+              fontSize: "14px",
+              display: { xs: "inline-flex", sm: "inline-flex" },
+            }}>
             356 results, with Ads
           </Typography>
-          <IconButton sx={{ padding: 0, color: "#555", fontSize: "14px" }}>
+          <IconButton
+            sx={{
+              padding: 0,
+              color: "#555",
+              fontSize: "14px",
+              display: { xs: "inline-flex", sm: "inline-flex" },
+            }}>
             <HelpOutlineIcon fontSize="small" />
           </IconButton>
           <Select
             defaultValue="Most relevant"
             variant="outlined"
             sx={{
+              display: { xs: "none", sm: "inline-flex" },
               fontWeight: "bold",
               padding: "5px 16px",
               borderRadius: "24px",
@@ -56,21 +93,22 @@ const FilterBar = () => {
               color: "black",
               fontSize: "14px",
               height: "36px",
+              textAlign: "right",
+              "& .MuiSelect-select": {
+                paddingRight: "24px",
+              },
             }}>
             <MenuItem value="Most relevant">Sort by: Most relevant</MenuItem>
-            <MenuItem value="Price: Low to High">
-              Sort by: Price: Low to High
-            </MenuItem>
-            <MenuItem value="Price: High to Low">
-              Sort by: Price: High to Low
-            </MenuItem>
           </Select>
         </Box>
       </Box>
-
       <Box
         sx={{
-          padding: "8px 24px",
+          paddingY: "8px",
+          paddingX: {
+            xs: 0,
+            sm: 4,
+          },
           display: "flex",
           justifyContent: "flex-start",
         }}>
